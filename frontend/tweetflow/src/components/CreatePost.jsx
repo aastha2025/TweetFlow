@@ -1,24 +1,37 @@
 import React from "react";
+import { CiImageOn } from "react-icons/ci";
 
 const CreatePost = () => {
     return (
-        <div className="w-[50%]">
-            <div className="m-3">
-                <div className="flex item-center justify-between">
-                    <div className="cursor-pointer">
-                        <h1 className="font-bold text-grey-600 text-lg ">For you</h1>
+        <div className="w-full">
+            <div>
+                <div className="flex items-center justify-evenly border-b border-gray-200">
+                    <div className="cursor-pointer hover:bg-gray-200 w-full text-center px-4 py-3">
+                        <h1 className="font-semibold text-gray-600 text-lg">For you</h1>
                     </div>
-                    <div className="cursor-pointer">
-                        <h1 className="font-bold text-grey-600 text-lg ">Following</h1>
+                    <div className="cursor-pointer hover:bg-gray-200 w-full text-center px-4 py-3">
+                        <h1 className="font-semibold text-gray-600 text-lg">Following</h1>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <input />
-                    </div>
+
+                <div className="flex items-center p-4">
+                    <div>{/* You can add user avatar here */}</div>
+                    <input
+                        className="w-full outline-none border-none text-lg ml-2"
+                        type="text"
+                        placeholder="What is happening?!"
+                    />
+                </div>
+
+                <div className="flex items-center justify-between p-4 border-b border-gray-300">
+                    <CiImageOn className="text-2xl cursor-pointer" />
+                    <button className="bg-[#1D9BF0] px-4 py-1 text-lg text-white border-none rounded-full">
+                        Post
+                    </button>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
+
 export default CreatePost;
